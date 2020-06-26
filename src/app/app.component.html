@@ -19,26 +19,5 @@
     </tbody>
 </table>
 
-<br>
 
-<h1> Listado de Libros Promise </h1>
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <td>Id</td>
-            <td>Nombre</td>
-            <td>Categoria</td>
-            <td>Año</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let libro of librosPromise">
-            <td>{{ libro.id }}</td>
-            <td>{{ libro.name }}</td>
-            <td>{{ libro.category }}</td>
-            <td>{{ libro.year }}</td>
-        </tr>
-    </tbody>
-</table>
-
+<button type="button" (click)="recargarPagina()">Recargar</button>

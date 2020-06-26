@@ -20,22 +20,17 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWriterWithFavBooks();
-    this.getWriterWithFavBooksPromise();
+    
   }
 
-  getWriterWithFavBooksPromise() {
-    this.myservicioService.getWriterWithFavBooksPromise().then(data => {
-      console.log(data);
-      this.librosPromise = data;
-    }).catch(error => {
-      console.log(error);
-    });
+  recargarPagina() {
+    this.getWriterWithFavBooks();
   }
 
   getWriterWithFavBooks() {
     this.myservicioService.getWriterWithFavBooks().subscribe(
       data => {
-        console.log(data);
+        
         this.libros = data;
       },
       (err: HttpErrorResponse) => {
